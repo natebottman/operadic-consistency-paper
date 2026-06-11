@@ -1,0 +1,27 @@
+================================================================================
+ Leave-one-model-out accuracy prediction (Table 3, App. A + teaser)
+================================================================================
+
+--- OC (paper headline) ---
+  dataset        n     fit_a    fit_b   in_R2   LOO MAE  LOO max
+  hotpotqa      12    +1.008   -0.013   0.855     0.028    0.062
+  musique       12    +1.327   -0.208   0.883     0.023    0.069
+  strategyqa    12    +0.898   +0.184   0.880     0.021    0.052
+  drop          12    +1.259   +0.139   0.735     0.047    0.131
+  pooled n=48: MAE = 0.030, max = 0.131
+
+--- CoT-SC K=10 (new teaser right panel) ---
+  dataset        n     fit_a    fit_b   in_R2   LOO MAE  LOO max
+  hotpotqa      12    +0.486   -0.013   0.858     0.024    0.083
+  musique       12    +0.641   +0.187   0.186     0.058    0.215
+  strategyqa    12    +1.061   -0.192   0.216     0.052    0.128
+  drop          12    +1.069   -0.207   0.756     0.049    0.126
+  pooled n=48: MAE = 0.046, max = 0.215
+
+--- naive-SC K=10 (old teaser right panel) ---
+  dataset        n     fit_a    fit_b   in_R2   LOO MAE  LOO max
+  hotpotqa      12    +0.323   +0.061   0.284     0.059    0.116
+  musique       12    +0.673   +0.104   0.199     0.068    0.122
+  strategyqa    12    +0.634   +0.197   0.495     0.037    0.116
+  drop          12    +0.861   -0.034   0.378     0.080    0.192
+  pooled n=48: MAE = 0.061, max = 0.192

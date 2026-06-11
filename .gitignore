@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Environment
+env/.env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build / cache artifacts
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+
+# Raw API data -- too large to ship; reproduction uses processed CSVs in data/per_question/
+data/raw/
+
+# Per-script transient outputs
+results/*.tmp
+experiments/nonthinking_oc_kdepth_oracle/

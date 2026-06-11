@@ -1,0 +1,25 @@
+# Core analysis (sufficient for `bash scripts/reproduce_paper.sh`)
+numpy>=1.24
+scipy>=1.11
+pandas>=2.0
+statsmodels>=0.14
+matplotlib>=3.7
+pytest>=7.0
+
+# Inference (only needed for `experiments/`)
+openai>=1.0          # OpenRouter (OpenAI-compatible chat completions)
+together>=1.5        # Together AI client
+datasets>=2.18       # HuggingFace datasets (HotpotQA, MuSiQue, DROP, GSM8K)
+huggingface-hub>=0.20
+requests>=2.31
+python-dotenv>=1.0
+tqdm>=4.65
+
+# Auxiliary scoring models (only needed for NLI / PRM baselines)
+torch>=2.1
+transformers>=4.40
+accelerate>=0.30
+# Note: experiments/prm_skywork/run.py also requires the `model_utils` helper
+# package shipped with Skywork-o1-Open-PRM-Qwen-2.5-7B (not on PyPI). Clone
+# from https://github.com/SkyworkAI/skywork-o1-prm-inference and add to
+# PYTHONPATH before running that script.

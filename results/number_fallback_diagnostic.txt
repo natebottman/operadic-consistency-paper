@@ -1,0 +1,20 @@
+================================================================================
+ Cross-model Pearson r between accuracy and OC-rate (App. A)
+================================================================================
+
+=== hotpotqa ===
+  F1 only       r=+0.925 p=0.0000
+  num-fallback  r=+0.924 p=0.0000  (number-path hit 18.7% for acc, 18.2% for OC)
+
+=== musique ===
+  F1 only       r=+0.939 p=0.0000
+  num-fallback  r=+0.937 p=0.0000  (number-path hit 25.5% for acc, 25.0% for OC)
+
+=== strategyqa ===
+  F1 only       r=+0.966 p=0.0000
+  num-fallback  r=+0.965 p=0.0000  (number-path hit 0.0% for acc, 0.3% for OC)
+
+=== drop ===
+  F1 only       r=+0.665 p=0.0182
+  num-fallback  r=+0.860 p=0.0003  (number-path hit 78.9% for acc, 68.9% for OC)
+
