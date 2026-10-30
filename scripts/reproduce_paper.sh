@@ -10,27 +10,30 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p results
 
-echo "[1/7] Per-question regressions (Tables 1, 4, 5)..."
+echo "[1/8] Per-question regressions (Tables 1, 4, 5)..."
 python -m analysis.per_question_regressions > results/per_question_regressions.txt
 
-echo "[2/7] Thinking-model regressions (Table 2, §3.2)..."
+echo "[2/8] Thinking-model regressions (Table 2, §3.2)..."
 python -m analysis.thinking_regressions > results/thinking_regressions.txt
 
-echo "[3/7] LOO accuracy prediction (Table 3, App A)..."
+echo "[3/8] LOO accuracy prediction (Table 3, App B.9)..."
 python -m analysis.loo_accuracy > results/loo.txt
 
-echo "[4/7] Number-fallback diagnostic (App A) and teaser figure..."
+echo "[4/8] Number-fallback diagnostic (App B.14) and teaser figure (Figure 1)..."
 python -m analysis.number_fallback_diagnostic > results/number_fallback_diagnostic.txt
 python -m analysis.plot_teaser
 
-echo "[5/7] Alternative OC scorers (App A)..."
+echo "[5/8] Alternative OC scorers (App B.14)..."
 python -m analysis.oc_alternative_scorers > results/oc_alternative_scorers.txt
 
-echo "[6/7] Selective prediction (AUARC + AUROC, §3.1 + §3.2)..."
+echo "[6/8] Selective prediction (AUARC + AUROC, §3.1 + §3.2)..."
 python -m analysis.selective_prediction > results/selective_prediction.txt
 
-echo "[7/7] Cross-model Pearson r per baseline (App A)..."
+echo "[7/8] Cross-model Pearson r per baseline (App B.13)..."
 python -m analysis.cross_model_baselines > results/cross_model_baselines.txt
+
+echo "[8/8] Signal-vs-accuracy scatter (Figure 3)..."
+python -m analysis.plot_fig1
 
 echo
 echo "Done. Outputs in results/. Compare against the paper:"

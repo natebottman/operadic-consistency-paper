@@ -1,10 +1,12 @@
 # Operadic consistency
 
 Companion code for *Operadic consistency: a label-free signal for compositional
-reasoning failures in LLMs*. Implements operadic consistency as a per-question
+reasoning failures in LLMs* (NeurIPS 2026; [arXiv:2606.13649](https://arxiv.org/abs/2606.13649)).
+Implements operadic consistency as a per-question
 selection signal, runs all baselines reported in the paper, and reproduces
 every table and figure. The operad-theoretic background is developed in a
-companion workshop paper, *Operads for compositional reasoning in LLMs*.
+companion paper, *Operads for compositional reasoning in LLMs*
+([arXiv:2606.13634](https://arxiv.org/abs/2606.13634)).
 
 ## What's here
 
@@ -34,13 +36,14 @@ Output lands in `results/`. Compare against the paper:
 | `results/` file                       | Paper section                                          |
 |---------------------------------------|--------------------------------------------------------|
 | `teaser.pdf`                          | Figure 1                                               |
+| `fig1.pdf`                            | Figure 3 (signal vs. accuracy, per dataset)            |
 | `per_question_regressions.txt`        | Tables 1, 4, 5 (3-way, P(True) sensitivity, dec-aware) |
 | `thinking_regressions.txt`            | Table 2 left (thinking-model regression, §3.2)         |
 | `selective_prediction.txt`            | Tables 1, 2 right (AUARC/AUROC selective prediction)   |
-| `cross_model_baselines.txt`           | Cross-model Pearson r per baseline (Fig 3, App. A)     |
-| `loo.txt`                             | Table 3 (LOO accuracy prediction, App. A)              |
-| `number_fallback_diagnostic.txt`      | App. A (DROP scorer sensitivity, hit rates)            |
-| `oc_alternative_scorers.txt`          | App. A (alternative OC scorers: LLM-judge sensitivity) |
+| `cross_model_baselines.txt`           | Table 7 (cross-model Pearson r per baseline, App. B.13) |
+| `loo.txt`                             | Table 3 (LOO accuracy prediction, App. B.9)            |
+| `number_fallback_diagnostic.txt`      | App. B.14 (DROP scorer sensitivity, hit rates)         |
+| `oc_alternative_scorers.txt`          | App. B.14 (alternative OC scorers: LLM-judge sensitivity) |
 
 ## Full reproduction from scratch (API keys required, several hundred USD, several days)
 
@@ -130,19 +133,20 @@ Thinking (§3.2, 5 models): `cogito-v2.1`, `deepseek-r1`, `glm-5.1`,
 If you use this code or build on operadic consistency, please cite:
 
 ```bibtex
-@misc{bottman_liu_richardson:empirics,
+@inproceedings{bottman_liu_richardson:empirics,
   title         = {Operadic consistency: a label-free signal for compositional
                    reasoning failures in {LLM}s},
   author        = {Bottman, Nathaniel and Liu, Yinhong and Richardson, Kyle},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
   year          = {2026},
-  note          = {arXiv preprint.}
+  note          = {arXiv:2606.13649}
 }
 
 @misc{bottman_richardson:theory,
   title         = {Operads for compositional reasoning in {LLM}s},
   author        = {Bottman, Nathaniel and Richardson, Kyle},
   year          = {2026},
-  note          = {arXiv preprint.}
+  note          = {arXiv:2606.13634}
 }
 ```
 
